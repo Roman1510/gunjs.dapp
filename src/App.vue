@@ -6,9 +6,14 @@
 </template>
 
 <script>
+import Header from './components/Header.vue'
+import Chat from './components/Chat.vue'
 export default {
   name: 'App',
-  components: {}
+  components: {
+    Header,
+    Chat
+  }
 }
 </script>
 
