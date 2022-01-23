@@ -13,10 +13,6 @@
     <div class="scroll-button">
       <button on:click="{autoScroll}" class:red="{unreadMessages}">👇</button>
     </div>
-
-    <main>
-      <Login />
-    </main>
   </div>
 </template>
 <script>
