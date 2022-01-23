@@ -3,7 +3,6 @@
     <img src="" alt="avatar" />
     <div class="message-text">
       <p>message</p>
-
       <time>Date</time>
     </div>
   </div>

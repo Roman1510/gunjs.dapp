@@ -6,7 +6,7 @@
       <img src="" alt="avatar" />
     </div>
     <button class="signout-button">Sign Out</button>
-    <h3>Gun.js Chat</h3>
+    <h3>GUN-DAPP</h3>
   </header>
 </template>
 <script>

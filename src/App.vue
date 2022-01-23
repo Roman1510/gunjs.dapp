@@ -1,21 +1,10 @@
 <template>
-  <div class="app">
-    <Header />
-    <Chat />
+  <div id="nav">
+    <router-link to="/chat">chat</router-link> |
+    <router-link to="/">login</router-link>
   </div>
+  <router-view />
 </template>
-
-<script>
-import Header from './components/Header.vue'
-import Chat from './components/Chat.vue'
-export default {
-  name: 'App',
-  components: {
-    Header,
-    Chat
-  }
-}
-</script>
 
 <style>
 #app {
@@ -24,5 +13,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
