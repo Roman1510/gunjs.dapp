@@ -12,9 +12,10 @@ export default {
       user.auth(username.value, password.value, ({ err }) => {
         if (err) {
           alert(err)
+        } else {
+          router.push({ name: 'chat' })
         }
       })
-      router.push({ name: 'chat' })
     }
 
     const signup = () => {

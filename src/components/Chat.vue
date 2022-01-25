@@ -16,9 +16,13 @@
   </div>
 </template>
 <script>
+import { username } from '../util/User'
 export default {
   name: 'Chat',
-  components: {}
+  components: {},
+  setup() {
+    console.log(username.value)
+  }
 }
 </script>
 <style></style>
