@@ -8,7 +8,7 @@
         maxlength="100"
       />
 
-      <button type="submit">Send</button>
+      <button class="send" type="submit">Send</button>
     </form>
     <div class="scroll-button">
       <button on:click="{autoScroll}" class:red="{unreadMessages}">👇</button>
