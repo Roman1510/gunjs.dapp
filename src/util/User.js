@@ -3,20 +3,18 @@ import 'gun/sea'
 import 'gun/axe'
 import { ref } from 'vue'
 
-// Database
-export const db = GUN()
+export const db = GUN({
+  peers: ['http://localhost:3000/gun']
+})
 
-// Gun User
 export const user = db.user().recall({ sessionStorage: true })
-
-// Current User's username
 export const username = ref('')
 
-user.get('alias').on((v) => username.value.set(v))
+user.get('alias').on((value) => (username.value = value))
 
-db.on('auth', async (event) => {
-  const alias = await user.get('alias') // username string
-  username.value.set(alias)
+db.on('auth', async () => {
+  const alias = await user.get('alias')
+  username.value = alias
 
-  console.log(`signed in as ${alias} and this is the event ${event}`)
+  console.log(`signed in as ${alias}`)
 })
